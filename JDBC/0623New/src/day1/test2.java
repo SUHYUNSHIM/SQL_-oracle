@@ -19,6 +19,9 @@ public class test2 {
 		String sql2 ="select first_name 이름, salary 봉급  from employees"
 				+" where salary >=?";
 		PreparedStatement ps2 = con1.prepareStatement(sql2);
+		//Statement st2 = con1.createStatement();
+		//ResultSet rs2 = st2.executeQuery(sql2); //검색을 실행하라.
+		
 		
 		Scanner sc1 = new Scanner(System.in);
 		System.out.println("봉급 얼마 이상 다 나와?");
