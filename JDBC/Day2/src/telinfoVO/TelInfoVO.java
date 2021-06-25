@@ -10,7 +10,7 @@ public class TelInfoVO {
 	
 	//generating으로 만든 인자가 있는 생성자---
 	public TelInfoVO(int id, String name, String tel, Date d) {
-		super();
+		//super();
 		this.id = id;
 		this.name = name;
 		this.tel = tel;
