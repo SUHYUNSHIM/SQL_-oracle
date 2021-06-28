@@ -30,10 +30,6 @@ class RunnableClass2 implements Runnable{
 	}// run end
 } //RunnableClass1 end
 
-
-
-
-
 public class RunnableMainClass {
 
 	public static void main(String[] args) {

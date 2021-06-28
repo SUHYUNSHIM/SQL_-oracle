@@ -10,7 +10,7 @@ public class TcpClient {
 	public static void main(String args[]) 
 		throws UnknownHostException , IOException{
 			
-			Socket s1 = new Socket("127.0.0.1",7780); //ip주소, port 번호.
+			Socket s1 = new Socket("127.0.0.1",7781); //ip주소, port 번호.
 			//
 			DataInputStream dis1 = new DataInputStream(s1.getInputStream());
 			System.out.println("네 말대로" + dis1.readUTF());

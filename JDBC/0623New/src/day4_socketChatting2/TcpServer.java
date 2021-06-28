@@ -8,8 +8,8 @@ import java.net.Socket;
 
 public class TcpServer {
 
-	public static void main(String[] args) throws IOException{
-		ServerSocket ss1 = new ServerSocket(7780); //포트넘버는 1024이후 마음대로 쓸 수 있음.
+	public static void main(String args[]) throws IOException{
+		ServerSocket ss1 = new ServerSocket(7781); //포트넘버는 1024이후 마음대로 쓸 수 있음.
 		System.out.println("전화는 준비되어 있음...");
 		
 		while(true) {
