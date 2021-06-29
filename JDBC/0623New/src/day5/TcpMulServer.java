@@ -21,7 +21,7 @@ class ServerClass{
 			System.out.println("접속주소: "+s1.getInetAddress() + ", 접솟포트: "+s1.getPort());
 			ThreadServerClass tServer1 = new ThreadServerClass(s1); //s1초기치. 한 명이 들어올 때마다 thread에 올리고
 			tServer1.start();
-			threadList.add(tSerevr1); //arraylist에 추가한다. 
+			threadList.add(tServer1); //arraylist에 추가한다. 
 			
 			System.out.println("접속자 수: "+ threadList.size()+" 명"); //컬렉션의 길이? 요소의 개수는 size이다.
 		}
@@ -58,11 +58,30 @@ class ServerClass{
 			} finally {
 				//채팅으로부터 나왔다.
 				//나간 스레드의 인덱스 찾기.
+				for(int i=0;i<threadList.size();i++) {
+					if(socket1.equals(threadList.get(i).socket1)) {
+						threadList.remove(i); //퇴장 시 remove
+						try {
+							sendChat(nickname+" 님 퇴장!");
+							//서버는 모든 클라이언트에게 누구누구님 퇴장이라고 보냄 
+						}catch(IOException e) {
+							//e.printStackTrace();
+						}
+					}//id- end
+				}//for- end
+				System.out.println("접속자 수 : "+threadList.size()+ " 명");
+			} //finally-end
+		}//run-end
+		
+		public void sendChat(String chat) throws IOException{
+			for(int i=0;i<threadList.size();i++) {
+				threadList.get(i).outputStream.writeUTF(chat); //각 사람마다, 내용을 나가는 통로에 넣는다.
+				//각각의 회원을 찾아가서 별명 or 채팅 내용을 보냄. 
 			}
-		}
-	}
+		}// sendChat -end
+	} //ThreadServerClass
 	
-	}
+	} //ServerClass -end 
 
 
 
