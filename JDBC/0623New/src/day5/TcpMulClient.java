@@ -26,7 +26,7 @@ class ThreadClientSendClass implements Runnable{
 			if(outputStream !=null)
 				outputStream.writeUTF(nickname); //닉네임 send
 				while(outputStream !=null) {
-					//io스트림을 통해 상대방에게 chat 보냄
+					//io스트림 통해 상대방에게 chat 보냄
 					outputStream.writeUTF("(**" +nickname +"**)" + in1.nextLine());
 				}
 		}catch(IOException e) {
