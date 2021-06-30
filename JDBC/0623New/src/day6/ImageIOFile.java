@@ -13,7 +13,7 @@ public class ImageIOFile {
 	
 	public static void main(String[] args) throws IOException {
 		File file1 = new File("C:\\Users\\USER\\Pictures\\slide-show\\a.jpg"); //원본 
-		BufferedImage buffimage1 = ImageIO.read(file1); //기존 파일 read하여 이미지화한 다음 
+		BufferedImage buffimage1 = ImageIO.read(file1); //기존 파일 read하여 이미지화한 다음 . 클래스.static메소드
 		
 		File file2 = new File("C:\\Users\\USER\\Pictures\\slide-show\\a1.jpg");
 		ImageIO.write(buffimage1, "jpg", file2); //이미지를 write
