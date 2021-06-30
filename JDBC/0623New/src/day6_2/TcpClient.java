@@ -19,7 +19,7 @@ public class TcpClient {
 		dis1.readFully(byteBae2);
 
 		//byte 배열 --> file로 저장
-		FileOutputStream fos1 = new FileOutputStream("C:\\Users\\USER\\Desktop\\abc11.jpg"); //C:\Users\USER\Desktop
+		FileOutputStream fos1 = new FileOutputStream("C:\\Users\\USER\\Desktop\\수업파일.docx"); //C:\Users\USER\Desktop -> 이미지 --> 문서파일로 수정
 		fos1.write(byteBae2);
 		System.out.println("끝!");
 	}

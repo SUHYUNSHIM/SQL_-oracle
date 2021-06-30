@@ -22,7 +22,9 @@ public class TcpServer {
 			Socket s1 = ss1.accept();
 			System.out.println(s1.getInetAddress()+"에서 접속");
 			
-			File file1 = new File("C:\\Users\\USER\\Pictures\\slide-show\\abc.jpg"); //그림 파일을 전송한다. 파일 뚜껑을 열었다.
+			//File file1 = new File("C:\\Users\\USER\\Pictures\\slide-show\\abc.jpg"); //그림 파일을 전송한다. 파일 뚜껑을 열었다.
+			File file1 = new File("C:\\Users\\USER\\Desktop\\컴퓨터\\JAVA-웹개발\\JDBC 넷째주 2_3.docx");
+			
 			FileInputStream fis1 = new FileInputStream(file1); // 파일을 받아들이는 객체 생성. file을 인자로 한.
 			DataInputStream dis1 = new DataInputStream(fis1);  //이진수 . 데이터 byte로 받아들임.
 			
