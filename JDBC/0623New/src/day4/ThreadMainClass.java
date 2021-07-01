@@ -31,8 +31,6 @@ class ThreadClass2 extends Thread
 	}
 } //ThreadClass2 - end
 
-
-
 public class ThreadMainClass { //클래스1
 	//ThreadMainClass.java
 	static public void main(String[] args) {
@@ -42,8 +40,6 @@ public class ThreadMainClass { //클래스1
 		tc1.start(); //ThreadClass1의 run()호출
 		tc2.start(); //ThreadClass2의 run()호출
 		//프로세스에 두개의 스레드가 올라간다.
-		//한쪽이 쉬면 다른 한쪽이 일한다.
-		
-		
+		//한쪽이 쉬면 다른 한쪽이 일한다.		
 	}
 }

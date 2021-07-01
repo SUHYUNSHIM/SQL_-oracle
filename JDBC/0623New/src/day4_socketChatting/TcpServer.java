@@ -40,8 +40,7 @@ class ThreadSend extends Thread{ //주거니
 		this.s1 =s1; //s1 받아서 s1 s1 필드에 넣기 
 		dos1 = new DataOutputStream(s1.getOutputStream()); //send를 위한 i/o 스트림. 자료를 보내는 통로.
 		//dos1은 자료를 내보내는 객체이다.
-		what1 = "미팅중==>"; //대화 시 앞에 항상 붙는 단어 
-		
+		what1 = "미팅중==>"; //대화 시 앞에 항상 붙는 단어 		
 	}
 	
 	public void run() {

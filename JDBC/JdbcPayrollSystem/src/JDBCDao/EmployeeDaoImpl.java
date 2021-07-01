@@ -68,8 +68,7 @@ public class EmployeeDaoImpl implements EmployeeDao{
 		try {
 			conn=DriverManager.getConnection( DB_URL,"hr","hr");
 			Statement stmt = conn.createStatement();
-			stmt.executeUpdate("insert into employee values ("
-			+ employee.getId() + ",'" + employee.getName() + "')");
+			stmt.executeUpdate("insert into employee values ("+ employee.getId() + ",'" + employee.getName() + "')");
 			stmt.close();
 		}catch (SQLException e) {
 			throw new RuntimeException(e);

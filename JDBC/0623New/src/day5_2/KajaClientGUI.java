@@ -45,9 +45,7 @@ public class KajaClientGUI extends JFrame implements Runnable, ActionListener {
 	                         DataInputStream inputStream, String nickname) {// 생성자
 		this.outputStream = outputStream;//필드(속성) 초기치 
 		this.inputStream = inputStream;
-		this.nickname = nickname;
-		
-		 
+		this.nickname = nickname;		 
 		
 		setLayout(new BorderLayout());///////////////
 		// North, South, West, East, Center
@@ -65,7 +63,6 @@ public class KajaClientGUI extends JFrame implements Runnable, ActionListener {
 		add("Center",jScrollPane);
 		   //new JScrollPane(jtarea1); //  이미 연결선언되어있음 
 		       //add("Center", jtarea1) //그러므로 이것 대신 위에것사용;//////////
-	
 		
 		
 		//chat 입력

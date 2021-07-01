@@ -54,8 +54,6 @@ class ThreadClientRcvClass implements Runnable{
 		}
 	}
 }
-
-
 public class TcpMulClient {
 
 	public static void main(String args[]) {
