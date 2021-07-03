@@ -9,10 +9,14 @@ import java.sql.Statement;
 
 import JDBCModel.Employee;
 
+
+@Repository
 public class EmployeeDaoImpl implements EmployeeDao{
 	static final String JDBC_DRIVER = "oracle.jdbc.driver.OracleDriver";
 	static final String DB_URL = "jdbc:oracle:thin:@localhost:1521:xe";
-	@Override
+	
+	
+	@Override	
 	public Employee getEmployeeById(int id) {
 		Connection conn = null;
 		Employee employee = null;

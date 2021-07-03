@@ -9,7 +9,7 @@ import java.util.ArrayList;
 
 class ServerClass{
 	ArrayList<ThreadServerClass> threadList = new ArrayList<ThreadServerClass>(); //제너릭
-	Socket socket; //클라이언트 바다 저장할 곳
+	Socket socket; //클라이언트 받아 저장할 곳
 	DataOutputStream outputStream; //출력 스트림 
 	
 	public ServerClass(int portno) throws IOException{
@@ -18,7 +18,7 @@ class ServerClass{
 		System.out.println("서버가동......."); //listen
 		while(true) {
 			s1 = ss1.accept(); //클라이언트의 접속을 허용한다.
-			System.out.println("접속주소: "+s1.getInetAddress() + ", 접솟포트: "+s1.getPort());
+			System.out.println("접속주소: "+s1.getInetAddress() + ", 접속포트: "+s1.getPort());
 			ThreadServerClass tServer1 = new ThreadServerClass(s1); //s1초기치. 한 명이 들어올 때마다 thread에 올리고
 			tServer1.start();
 			threadList.add(tServer1); //arraylist에 추가한다. 
