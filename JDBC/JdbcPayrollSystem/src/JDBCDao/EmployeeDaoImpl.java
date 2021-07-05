@@ -10,7 +10,7 @@ import java.sql.Statement;
 import JDBCModel.Employee;
 
 
-@Repository
+//@Repository
 public class EmployeeDaoImpl implements EmployeeDao{
 	static final String JDBC_DRIVER = "oracle.jdbc.driver.OracleDriver";
 	static final String DB_URL = "jdbc:oracle:thin:@localhost:1521:xe";
